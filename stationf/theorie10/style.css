@@ -1,0 +1,229 @@
+/* reset on réinitialise les styles par défaut du navigateur */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* pour créer un scroll fluide */
+  scroll-behavior: smooth;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* Style global */
+* {
+  font-family: "Cabin", sans-serif;
+}
+
+.flux {
+  margin-left: 75px;
+  margin-right: 75px;
+}
+@media (max-width: 640px) {
+  .flux {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+
+.title-2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.text-paragraph {
+  line-height: 1.5;
+}
+
+.button {
+  border-radius: 30px;
+  color: white;
+  font-weight: 500;
+  padding: 15px 30px;
+  text-transform: uppercase;
+}
+
+/* HEADER */
+.header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.logo {
+  height: 25px;
+  width: 125px;
+}
+
+.list-link {
+  display: flex;
+  column-gap: 40px;
+}
+@media (max-width: 640px) {
+  .list-link {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+}
+
+.nav-link {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.button-black {
+  background-color: black;
+}
+.button-black:hover {
+  background-color: rgb(60, 59, 59);
+}
+
+/* START COVER */
+.cover {
+  display: flex;
+  align-items: center;
+  gap: 150px;
+}
+@media (max-width: 640px) {
+  .cover {
+    flex-direction: column;
+  }
+}
+.cover-text {
+  /* margin-right: 100px; */
+  width: 35%;
+}
+
+.cover-title {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.cover-introduction {
+  margin-bottom: 30px;
+}
+
+.cover-image {
+  flex-shrink: 0;
+  /* flex-shrink permet de dire que si il y a modification de la taille d'écran je veux que mon image ne fasse pas moin de 50% */
+  height: 250px;
+  object-fit: cover;
+  /* cover permet de positionner une image pour qu'elle remplisse la boite quitte à la déformer à l'inverse de contain qui étire au maximum l'image en respectant ses proportitions */
+  object-position: bottom;
+  /* décide quelle partie de l'image doit être préférentiellement visible */
+  width: 40%;
+}
+
+.icon-scroll {
+  align-items: center;
+  background-color: black;
+  border-radius: 100%;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  width: 50px;
+}
+/* START PROGRAMS */
+.programs {
+  background-color: #202020;
+  margin-top: 75px;
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+
+.programs .flux {
+  display: flex;
+  gap: 50px;
+}
+
+.programs-container-text {
+  /* on doit mettre un align items quand on fait un display flex pour bloquer effet stretch automatique et redonner aux éléments enfants la taille de leur contenu et on choisit le type d'align items suivant la position que l'on souhaite */
+  align-items: flex-start;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
+}
+
+.programs .title-2 {
+  line-height: 1.25;
+  width: 50%;
+}
+
+.programs-container-text p {
+  flex-grow: 1;
+}
+
+/* quand on stylise des liens on les passe de inline à inline-block pour éviter qu'ils se superposent avec le texte */
+.button-yellow {
+  background: linear-gradient(90deg, #ff3395, #ffb800 50% 100%);
+  background-size: 200% 100%;
+  background-position: right;
+  display: inline-block;
+  margin-top: 50px;
+  transition: all 0.5s;
+}
+.button-yellow:hover {
+  background-position: left;
+}
+
+.programs-container-image {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.programs-container-image li {
+  background-color: white;
+  border-radius: 10px;
+  height: 130px;
+  padding: 50px;
+  width: calc(50% - 25px / 2);
+}
+
+.programs-container-image li img {
+  height: 100%;
+  object-fit: contain;
+  width: 100%;
+}
+
+/* START ONLINE */
+.online {
+  background: linear-gradient(180deg, #202020 0% 50%, white 50% 100%);
+}
+
+.online-content {
+  border-radius: 10px;
+  display: flex;
+  padding: 75px 50px 50px;
+  background: linear-gradient(90deg, #ff3395, #ffb800 10%);
+}
+
+.online-container-text {
+  color: white;
+  width: 50%;
+}
+
+.online-image {
+  padding-right: 50px;
+  width: 50%;
+}
+
+.button-black2 {
+  background-color: black;
+  display: inline-block;
+  margin-top: 50px;
+  transition: background-color 0.25s;
+}
+.button-black2:hover {
+  background-color: rgb(60, 59, 59);
+}
