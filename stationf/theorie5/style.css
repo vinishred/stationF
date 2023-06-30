@@ -1,0 +1,76 @@
+body {
+  background-color: grey;
+}
+
+.container {
+  background-color: blue;
+  height: 500px;
+  display: flex;
+  /* met tout sur une ligne row ou une colonne en adaptant la taille pour que tout tienne sur une ligne ou colonne */
+  flex-direction: row;
+  /* pour gérer la direction du contenu par defaut en row sinon column */
+  flex-wrap: wrap;
+  /* pour que le logiciel adapte le contenu à la taille de l'écran avec si besoin création d'une nouvelle ligne ou une nouvelle colonne */
+  gap: 50px;
+  /* gap permet de gérer l'espacement entre les boites */
+  justify-content: space-between;
+  /* permet de décider du comportement du contenu de la boite sur le plan horizontal */
+  align-items: center;
+  /* permet de décider du comportement du contenu de la boite sur le plan vertical
+  si on met stretch cela va étirer les blocs pour qu'ils prennent toute la hauteur du container */
+}
+
+.square {
+  width: 200px;
+  height: 300px;
+  background-color: black;
+  color: white;
+}
+
+.second-container {
+  background-color: yellow;
+}
+
+.block {
+  background-color: black;
+  color: white;
+  display: block;
+  height: 50px;
+  width: 50px;
+}
+
+.third-container {
+  background-color: chocolate;
+}
+
+.inline {
+  /* par défaut les textes et balises a sont en inline */
+  /* dans le display inline l'élément se base par rapport à son texte et ne peut etr stylisé par un margin ou padding ou une width */
+  background-color: black;
+  color: white;
+  display: inline;
+  /* width: 500px; ça n'aura aucun effet */
+}
+.fourth-container {
+  background-color: purple;
+}
+
+.inline-block {
+  /* les images sont par défaut en inline-block */
+  background-color: black;
+  color: white;
+  display: inline-block;
+  margin: 50px;
+  width: 500px;
+  /* alternative entre block et inline block possède la propriété en ligne mais avec les options block telles que width ou margin*/
+}
+.two {
+  background-color: magenta;
+  order: -1;
+}
+
+.four {
+  order: 2;
+  /* order permet de positionner un élément à un endroit précis en général tous les éléments ont le même order 0 ou 1 donc sur on veut le mettre avanrt on met -1 et si on veut le mattre à la fin on met un chiffre >= à 2 */
+  background-color: tomato;
+}

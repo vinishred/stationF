@@ -1,0 +1,16 @@
+/* pour les couleurs la norme rgb red green blue
+pas de fichier css sans fichier html */
+header {
+  background-color: rgb(150, 150, 150);
+}
+
+ul,
+ol {
+  color: blue;
+}
+.main-title {
+  font-style: italic;
+}
+#secondary-title {
+  text-decoration: underline;
+}

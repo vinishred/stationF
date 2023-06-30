@@ -1,0 +1,40 @@
+/* HEADER */
+.header {
+  align-items: center;
+  background-color: grey;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 25px;
+  width: 125px;
+}
+
+.list-link {
+  display: flex;
+  column-gap: 20px;
+  list-style: none;
+}
+
+.nav-link {
+  text-transform: uppercase;
+}
+
+.button {
+  background-color: black;
+  border-radius: 20px;
+  color: white;
+  padding: 10px 15px;
+}
+
+/* COVER */
+.cover {
+  display: flex;
+}
+
+.cover-image {
+  flex-shrink: 0;
+  /* flex-shrink permet de dire que si il y a modification de la taille d'écran je veux que mon image ne fasse pas moin de 50% */
+  width: 50%;
+}

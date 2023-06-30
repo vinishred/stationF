@@ -1,0 +1,57 @@
+/* en debut de stylisation on peut faire un reset pour supprimer les parametres de stylisation par défaut* { */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: grey;
+}
+
+.container {
+  border: 3px solid black;
+  display: flex;
+  /* par défaut quand on est en display flex les éléments sont en align items stretch */
+  width: 100%;
+}
+
+.left {
+  background-color: blue;
+  width: 50%;
+}
+
+.right {
+  background-color: red;
+  height: 100vh;
+  /* l'unité px est une unité fixe
+  l'unité % adapte sa taille à celle de son parent
+  l'unité vh et vw (viewport height et width corespond au pourcentage par rapport à la taille de l'écran */
+  width: 50%;
+}
+
+/* pour faire du responsive on utilise ce qu'on appelle les medias queries */
+@media (max-width: 1000px) {
+  .right {
+    background-color: green;
+  }
+}
+
+@media (min-width: 500px) and (orientation: landscape) {
+  .left {
+    background-color: purple;
+    color: white;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+  }
+}

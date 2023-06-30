@@ -1,0 +1,48 @@
+body {
+  background-color: rgb(200, 200, 200);
+}
+main {
+  font-style: italic;
+}
+h1 {
+  background-color: aqua;
+}
+p {
+  background-color: violet;
+  color: white;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+.left {
+  text-align: left;
+}
+
+.first-part {
+  background-color: yellow;
+}
+
+.second-part {
+  background-color: green;
+}
+
+.title {
+  text-align: center;
+}
+
+.cover {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.bloc {
+  border: solid 1px black;
+}

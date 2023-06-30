@@ -1,0 +1,110 @@
+/* reset on réinitialise les styles par défaut du navigateur */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* Style global */
+* {
+  font-family: "Cabin", sans-serif;
+}
+
+.flux {
+  margin-left: 75px;
+  margin-right: 75px;
+}
+@media (max-width: 640px) {
+  .flux {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+
+/* HEADER */
+.header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.logo {
+  height: 25px;
+  width: 125px;
+}
+
+.list-link {
+  display: flex;
+  column-gap: 40px;
+}
+@media (max-width: 640px) {
+  .list-link {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+}
+
+.nav-link {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.button {
+  background-color: black;
+  border-radius: 30px;
+  color: white;
+  font-weight: 500;
+  padding: 15px 30px;
+}
+
+/* COVER */
+.cover {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 640px) {
+  .cover {
+    flex-direction: column;
+  }
+}
+
+.cover-title {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.cover-introduction {
+  margin-bottom: 30px;
+}
+
+.cover-image {
+  flex-shrink: 0;
+  /* flex-shrink permet de dire que si il y a modification de la taille d'écran je veux que mon image ne fasse pas moin de 50% */
+  height: 250px;
+  object-fit: cover;
+  /* cover permet de positionner une image pour qu'elle remplisse la boite quitte à la déformer à l'inverse de contain qui étire au maximum l'image en respectant ses proportitions */
+  object-position: bottom;
+  /* décide quelle partie de l'image doit être préférentiellement visible */
+  width: 55%;
+}
+
+.icon-scroll {
+  align-items: center;
+  background-color: black;
+  border-radius: 100%;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  width: 50px;
+}
